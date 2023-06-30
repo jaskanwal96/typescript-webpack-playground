@@ -7,6 +7,11 @@ import {
   updateScreen,
 } from './utils/index';
 
+import('./firebase/index').then((firebase) => {
+  // Your code that uses the firebase module goes here
+  console.log(firebase)
+});
+
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   let localJson = checkLocalStorage();
@@ -25,3 +30,5 @@ window.onload = () => {
     getDeleteButtonNode();
   }
 };
+
+
